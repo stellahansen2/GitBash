@@ -1,4 +1,5 @@
 version=$('cat version')
+echo "$version"
 filename="test"
 git checkout "$version" -- "$filename"
 git add .
