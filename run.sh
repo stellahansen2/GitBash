@@ -1,4 +1,4 @@
-#cd /Users/458537/GitHub/GitBash
+cd /Users/458537/GitHub/GitBash
 #reads from our file of information the version number, what the
     #comment should be, and what filename we are looking for in the
     #repository
