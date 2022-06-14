@@ -7,7 +7,7 @@ comment="$(echo $readComment | egrep -o "'.*'")"
 updatedComment="$(echo "$comment" | sed -e "s/^'//" -e "s/'$//")"
 filename="$(echo $readFilename | egrep -o "'.*'")"
 updatedFilename="$(echo "$filename" | sed -e "s/^'//" -e "s/'$//")"
-git checkout "$version" -- "updatedFilename"
+git checkout "$version" -- "$updatedFilename"
 git add .
 git commit -m "$updatedComment"
 git push
