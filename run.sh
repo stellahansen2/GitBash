@@ -1,4 +1,4 @@
-version=$('cat newVersion')
+version="$(cat newVersion)"
 echo "$version"
 filename="test"
 git checkout "$version" -- "$filename"
