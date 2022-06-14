@@ -7,6 +7,7 @@ version=$(echo $first | egrep -o '[0-9a-z]{40}')
 #version=$(echo "$IN" | cut -d ":" -f 2)
 #comment=
 filename="$(echo "$filename" | sed -e "s/^'//" -e "s/'$//")"
+echo $filename
 #filename="test"
 git checkout "$version" -- "$filename"
 git add .
