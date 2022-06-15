@@ -1,3 +1,6 @@
+#This gets the path to the repository that we want and opens
+    #the terminal to that folder so that we can use git
+    #commands
 readPath="$(grep -i "path:" /Users/458537/Desktop/file.sh)"
 path="$(echo $readPath | egrep -o "'.*'")"
 updatedPath=$(echo "$path" | sed -e "s/^'//" -e "s/'$//")
@@ -26,6 +29,15 @@ git checkout "$version" -- "$updatedFilename"
 git add .
 git commit -m "$updatedComment"
 git push
+
+
+
+
+
+
+
+
+
 
 
 # EXTRA CODE:
