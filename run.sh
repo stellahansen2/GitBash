@@ -1,4 +1,7 @@
-cd /Users/458537/GitHub/GitBash
+readPath="$(grep -i "path:" /Users/458537/Desktop/file.sh)"
+path="$(echo $readPath | egrep -o "'.*'")"
+updatedPath=$(echo "$path" | sed -e "s/^'//" -e "s/'$//")
+cd "$updatedPath"
 #reads from our file of information the version number, what the
     #comment should be, and what filename we are looking for in the
     #repository
